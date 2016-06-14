@@ -1,16 +1,10 @@
 #http://www.tutorialspoint.com/python/python_classes_objects.htm
 #-------------------------------------------------------------------------------
-# Name:        module1
-# Purpose:
-#
-# Author:      NBesteman
-#
+# Name:        classUnit
+# Purpose:     creates a class of County Units for use in data process automation
+# Author:      Neil Besteman
 # Created:     13/06/2016
-# Copyright:   (c) NBesteman 2016
-# Licence:     <your licence>
 #-------------------------------------------------------------------------------
-self = ""
-
 class Unit:
     unitcount = 0
     def __init__(self, fmcd, name, nospacename, code, twprng,propername,shortname,unittype):
