@@ -4,7 +4,7 @@
 # Purpose:     creates a class of County Units for use in data process automation
 # Author:      Neil Besteman
 # Created:     20160613
-# Modified     20160615
+# Modified     20160616
 #-------------------------------------------------------------------------------
 class Unit:
     unitcount = 0
@@ -59,7 +59,6 @@ unit58 = Unit("58","84880","Wayland City","WaylandCity","","Wayland City","Wayla
 unit59 = Unit("59","22740","Douglas City","DouglasCity","","Douglas City","Douglas","City")
 
 unitCode = [unit01.code,
-            unit01.code,
             unit02.code,
             unit03.code,
             unit04.code,
