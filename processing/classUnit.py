@@ -8,7 +8,7 @@
 #-------------------------------------------------------------------------------
 class Unit:
     unitcount = 0
-    def __init__(self, code, fmcd, name, nospacename, twprng,propername,shortname,xMin,YMin,xMax,yMax,unittype):
+    def __init__(self, code, fmcd, name, nospacename, twprng,propername,shortname,xMin,yMin,xMax,yMax,unittype):
         self.code = code
         self.fmcd = fmcd
         self.name = name
@@ -23,44 +23,55 @@ class Unit:
         self.unittype = unittype
     def displayUnit(self):
         print "fmcd: ", self.fmcd, ", Name: ", self.name, ", Unit Code: ", self.code
-    def passUnit(x):
+    def passUnit(self):
         x = self.fmcd
-
-unit01 = Unit("01","1280","Allegan Twp","AlleganTwp","T2NR13W","Allegan Township","Allegan","12710706.2154994","370432.64368309","12742488.4701762","402418.622361924","Township?)
-unit02 = Unit("02","13700","Casco Twp","CascoTwp","T1NR16W","Casco Township","Casco","12605000.8997312","339936.769635595","12648052.823418","372250.564259845","Township?)
-unit03 = Unit("03","15200","Cheshire Twp","CheshireTwp","T1NR14W","Cheshire Township","Cheshire","12679125.363963","338939.464215509","12710923.5431487","371192.461061092","Township?)
-unit04 = Unit("04","16720","Clyde Twp","ClydeTwp","T2NR15W","Clyde Township","Clyde","12647831.5148055","371192.46106109","12679514.8933677","403709.315974756","Township?)
-unit05 = Unit("05","22680","Dorr Twp","DorrTwp","T4NR12W","Dorr Township","Dorr","12743225.0631912","433126.847034595","12775281.509905","465361.674297095","Township?)
-unit06 = Unit("06","28120","Fillmore Twp","FillmoreTwp","T4NR15W","Fillmore Township","Fillmore","12647923.7534661","435107.680343262","12680266.0844506","466985.518818429","Township?)
-unit07 = Unit("07","31360","Ganges Twp","GangesTwp","T2NR16W","Ganges Township","Ganges","12616849.5561002","371764.480258256","12648057.1367295","403903.085928422","Township?)
-unit08 = Unit("08","35720","Gun Plain Twp","GunPlainTwp","T1NR11W","Gun Plain Township","Gun Plain","12773828.1069719","338023.954563595","12806178.731575","370071.647685928","Township?)
-unit09 = Unit("09","37460","Heath Twp","HeathTwp","T3NR14W","Heath Township","Heath","12679199.6850086","402394.401281759","12711647.5262808","435107.680343259","Township?)
-unit10 = Unit("10","39200","Hopkins Twp","HopkinsTwp","T3NR12W","Hopkins Township","Hopkins","12742458.276339","401481.293199844","12774981.7693627","433790.442820261","Township?)
-unit11 = Unit("11","45180","Laketown Twp","LaketownTwp","T4NR16W","Laketown Township","Laketown","12627167.7464218","435594.096365176","12648043.8647745","467356.111253092","Township?)
-unit12 = Unit("12","46600","Lee Twp","LeeTwp","T1NR15W","Lee Township","Lee","12647553.8001378","339230.040077924","12679514.894352","371764.480586341","Township?)
-unit13 = Unit("13","46760","Leighton Twp","LeightonTwp","T4NR11W","Leighton Township","Leighton","12774981.7677223","432761.869746178","12806832.7043484","464814.539236511","Township?)
-unit14 = Unit("14","50840","Manlius Twp","ManliusTwp","T3NR15W","Manlius Township","Manlius","12647845.7831496","403118.05239351","12680248.1668355","435594.096037094","Township?)
-unit15 = Unit("15","52000","Martin Twp","MartinTwp","T2NR11W","Martin Township","Martin","12774166.5403501","369840.052676677","12806586.1785947","401481.293199844","Township?)
-unit16 = Unit("16","55200","Monterey Twp","MontereyTwp","T3NR13W","Monterey Township","Monterey","12710706.2154994","402244.760176844","12743236.6740604","434002.130060928","Township?)
-unit17 = Unit("17","61640","Otsego Twp","OtsegoTwp","T1NR12W","Otsego Township","Otsego","12742278.7740733","338272.471455007","12774166.5403501","370496.016915924","Township?)
-unit18 = Unit("18","61820","Overisel Twp","OveriselTwp","T4NR14W","Overisel Township","Overisel","12679963.4836779","434002.130060926","12711647.5275931","466777.787278509","Township?)
-unit19 = Unit("19","71100","Salem Twp","SalemTwp","T4NR13W","Salem Township","Salem","12711293.8298097","433790.111128009","12743266.8682257","465731.628609676","Township?)
-unit20 = Unit("20","71720","Saugatuck Twp","SaugatuckTwp","T3NR16W","Saugatuck Township","Saugatucl","12622191.4509282","403709.315974757","12647923.7534661","435923.561257423","Township?)
-unit21 = Unit("21","80620","Trowbridge Twp","TrowbridgeTwp","T1NR13W","Trowbridge Township","Trowbridge","12710747.690154","338702.48174984","12742484.4885569","370527.206158006","Township?)
-unit22 = Unit("22","81580","Valley Twp","ValleyTwp","T2NR14W","Valley Township","Valley","12679199.6853367","370462.173807762","12710923.5434768","403118.052065429","Township?)
-unit23 = Unit("23","84580","Watson Twp","WatsonTwp","T2NR12W","Watson Township","Watson","12742420.4516115","370023.868910096","12774260.4381282","402244.760176846","Township?)
-unit24 = Unit("24","84900","Wayland Twp","WaylandTwp","T3NR11W","Wayland Township","Wayland","12774287.6464071","401173.053002677","12806532.4270618","433126.847034594","Township?)
-unit42 = Unit("42","39200","Hopkins Village","Hopkins Village","","Hopkins Village","Hopkins","12777105.273974","378627.387792259","12783742.2265793","382604.648538509","Village?)
-unit44 = Unit("44","52000","Martin Village","Martin Village","","Martin Village","Martin","12745300.4445391","411382.80554901","12749483.553955","414784.241987594","Village?)
-unit51 = Unit("51","1260","Allegan City","AlleganCity","","Allegan City","Allegan","12718715.0692323","372686.991208508","12733456.9974255","386329.184068425","City?)
-unit52 = Unit("52","27740","Fennville City","FennvilleCity","","Fennville City","Fennville","12651313.250296","400578.803206928","12658419.7183665","406563.971682761","City?)
-unit53 = Unit("53","38640","Holland City","HollandCity","","Holland City","Holland","12646622.7747689","452625.625294178","12669452.7323897","467218.295911928","City?)
-unit54 = Unit("54","61620","Otsego City","OtsegoCity","","Otsego City","Otsego","12758085.6246774","346355.399514846","12768662.3453218","357359.475931846","City?)
-unit55 = Unit("55","64740","Plainwell City","PlainwellCity","","Plainwell City","Plainwell","12773943.5722921","343530.804114177","12784537.5461829","351881.493121427","City?)
-unit56 = Unit("56","71700","Saugatuck City","SaugatuckCity","","Saugatuck City","Saugatuck","12775008.7597943","425130.850231342","12786675.983507","435652.824594175","City?)
-unit57 = Unit("57","74980","South Haven City","South HavenCity","","South Haven City","South Haven","12623891.7834855","422882.674609594","12632744.0102036","434161.478167427","City?)
-unit58 = Unit("58","84880","Wayland City","WaylandCity","","Wayland City","Wayland","12611712.329498","340775.554375343","12612722.3222287","342094.782708009","City?)
-unit59 = Unit("59","22740","Douglas City","DouglasCity","","Douglas City","Douglas","12622459.7797879","416608.619572423","12633100.2850816","424778.653429173","City?)
+        return x
+    def extentVals(self):
+        print "xMin = ",self.xMin
+        print "yMin = ",self.yMin
+        print "xMax = ",self.xMax
+        print "yMax = ",self.yMax
+    def passExtentVals(self):
+        x1 = self.xMin
+        y1 = self.yMin
+        x2 = self.xMax
+        y2 = self.yMax
+        return [x1,y1,x2,y2]
+unit01 = Unit("01","1280","Allegan Twp","AlleganTwp","T2NR13W","Allegan Township","Allegan","12710706.2154994","370432.64368309","12742488.4701762","402418.622361924","Township")
+unit02 = Unit("02","13700","Casco Twp","CascoTwp","T1NR16W","Casco Township","Casco","12605000.8997312","339936.769635595","12648052.823418","372250.564259845","Township")
+unit03 = Unit("03","15200","Cheshire Twp","CheshireTwp","T1NR14W","Cheshire Township","Cheshire","12679125.363963","338939.464215509","12710923.5431487","371192.461061092","Township")
+unit04 = Unit("04","16720","Clyde Twp","ClydeTwp","T2NR15W","Clyde Township","Clyde","12647831.5148055","371192.46106109","12679514.8933677","403709.315974756","Township")
+unit05 = Unit("05","22680","Dorr Twp","DorrTwp","T4NR12W","Dorr Township","Dorr","12743225.0631912","433126.847034595","12775281.509905","465361.674297095","Township")
+unit06 = Unit("06","28120","Fillmore Twp","FillmoreTwp","T4NR15W","Fillmore Township","Fillmore","12647923.7534661","435107.680343262","12680266.0844506","466985.518818429","Township")
+unit07 = Unit("07","31360","Ganges Twp","GangesTwp","T2NR16W","Ganges Township","Ganges","12616849.5561002","371764.480258256","12648057.1367295","403903.085928422","Township")
+unit08 = Unit("08","35720","Gun Plain Twp","GunPlainTwp","T1NR11W","Gun Plain Township","Gun Plain","12773828.1069719","338023.954563595","12806178.731575","370071.647685928","Township")
+unit09 = Unit("09","37460","Heath Twp","HeathTwp","T3NR14W","Heath Township","Heath","12679199.6850086","402394.401281759","12711647.5262808","435107.680343259","Township")
+unit10 = Unit("10","39200","Hopkins Twp","HopkinsTwp","T3NR12W","Hopkins Township","Hopkins","12742458.276339","401481.293199844","12774981.7693627","433790.442820261","Township")
+unit11 = Unit("11","45180","Laketown Twp","LaketownTwp","T4NR16W","Laketown Township","Laketown","12627167.7464218","435594.096365176","12648043.8647745","467356.111253092","Township")
+unit12 = Unit("12","46600","Lee Twp","LeeTwp","T1NR15W","Lee Township","Lee","12647553.8001378","339230.040077924","12679514.894352","371764.480586341","Township")
+unit13 = Unit("13","46760","Leighton Twp","LeightonTwp","T4NR11W","Leighton Township","Leighton","12774981.7677223","432761.869746178","12806832.7043484","464814.539236511","Township")
+unit14 = Unit("14","50840","Manlius Twp","ManliusTwp","T3NR15W","Manlius Township","Manlius","12647845.7831496","403118.05239351","12680248.1668355","435594.096037094","Township")
+unit15 = Unit("15","52000","Martin Twp","MartinTwp","T2NR11W","Martin Township","Martin","12774166.5403501","369840.052676677","12806586.1785947","401481.293199844","Township")
+unit16 = Unit("16","55200","Monterey Twp","MontereyTwp","T3NR13W","Monterey Township","Monterey","12710706.2154994","402244.760176844","12743236.6740604","434002.130060928","Township")
+unit17 = Unit("17","61640","Otsego Twp","OtsegoTwp","T1NR12W","Otsego Township","Otsego","12742278.7740733","338272.471455007","12774166.5403501","370496.016915924","Township")
+unit18 = Unit("18","61820","Overisel Twp","OveriselTwp","T4NR14W","Overisel Township","Overisel","12679963.4836779","434002.130060926","12711647.5275931","466777.787278509","Township")
+unit19 = Unit("19","71100","Salem Twp","SalemTwp","T4NR13W","Salem Township","Salem","12711293.8298097","433790.111128009","12743266.8682257","465731.628609676","Township")
+unit20 = Unit("20","71720","Saugatuck Twp","SaugatuckTwp","T3NR16W","Saugatuck Township","Saugatucl","12622191.4509282","403709.315974757","12647923.7534661","435923.561257423","Township")
+unit21 = Unit("21","80620","Trowbridge Twp","TrowbridgeTwp","T1NR13W","Trowbridge Township","Trowbridge","12710747.690154","338702.48174984","12742484.4885569","370527.206158006","Township")
+unit22 = Unit("22","81580","Valley Twp","ValleyTwp","T2NR14W","Valley Township","Valley","12679199.6853367","370462.173807762","12710923.5434768","403118.052065429","Township")
+unit23 = Unit("23","84580","Watson Twp","WatsonTwp","T2NR12W","Watson Township","Watson","12742420.4516115","370023.868910096","12774260.4381282","402244.760176846","Township")
+unit24 = Unit("24","84900","Wayland Twp","WaylandTwp","T3NR11W","Wayland Township","Wayland","12774287.6464071","401173.053002677","12806532.4270618","433126.847034594","Township")
+unit42 = Unit("42","39200","Hopkins Village","Hopkins Village","","Hopkins Village","Hopkins","12777105.273974","378627.387792259","12783742.2265793","382604.648538509","Village")
+unit44 = Unit("44","52000","Martin Village","Martin Village","","Martin Village","Martin","12745300.4445391","411382.80554901","12749483.553955","414784.241987594","Village")
+unit51 = Unit("51","1260","Allegan City","AlleganCity","","Allegan City","Allegan","12718715.0692323","372686.991208508","12733456.9974255","386329.184068425","City")
+unit52 = Unit("52","27740","Fennville City","FennvilleCity","","Fennville City","Fennville","12651313.250296","400578.803206928","12658419.7183665","406563.971682761","City")
+unit53 = Unit("53","38640","Holland City","HollandCity","","Holland City","Holland","12646622.7747689","452625.625294178","12669452.7323897","467218.295911928","City")
+unit54 = Unit("54","61620","Otsego City","OtsegoCity","","Otsego City","Otsego","12758085.6246774","346355.399514846","12768662.3453218","357359.475931846","City")
+unit55 = Unit("55","64740","Plainwell City","PlainwellCity","","Plainwell City","Plainwell","12773943.5722921","343530.804114177","12784537.5461829","351881.493121427","City")
+unit56 = Unit("56","71700","Saugatuck City","SaugatuckCity","","Saugatuck City","Saugatuck","12775008.7597943","425130.850231342","12786675.983507","435652.824594175","City")
+unit57 = Unit("57","74980","South Haven City","South HavenCity","","South Haven City","South Haven","12623891.7834855","422882.674609594","12632744.0102036","434161.478167427","City")
+unit58 = Unit("58","84880","Wayland City","WaylandCity","","Wayland City","Wayland","12611712.329498","340775.554375343","12612722.3222287","342094.782708009","City")
+unit59 = Unit("59","22740","Douglas City","DouglasCity","","Douglas City","Douglas","12622459.7797879","416608.619572423","12633100.2850816","424778.653429173","City")
 
 
 unitCode = [unit01.code,
@@ -315,7 +326,7 @@ unitShortname = [unit01.shortname,
             unit58.shortname,
             unit59.shortname]
 
-unit XMin = [unit01.xMin,
+unitxMin = [unit01.xMin,
             unit02.xMin,
             unit03.xMin,
             unit04.xMin,
@@ -351,7 +362,7 @@ unit XMin = [unit01.xMin,
             unit58.xMin,
             unit59.xMin]
 
-unit YMin =[unit01.yMin,
+unityMin =[unit01.yMin,
             unit02.yMin,
             unit03.yMin,
             unit04.yMin,
@@ -387,7 +398,7 @@ unit YMin =[unit01.yMin,
             unit58.yMin,
             unit59.yMin]
 
-unit XMax =[unit01.xMax,
+unitxMax =[unit01.xMax,
             unit02.xMax,
             unit03.xMax,
             unit04.xMax,
@@ -423,7 +434,7 @@ unit XMax =[unit01.xMax,
             unit58.xMax,
             unit59.xMax]
 
-unit YMax =[unit01.yMax,
+unityMax =[unit01.yMax,
             unit02.yMax,
             unit03.yMax,
             unit04.yMax,
@@ -497,9 +508,11 @@ unitType = [unit01.unittype,
 
 def main():
     pass
-    unit01.displayUnit()
-    for value in unitName:
-        print value
-
+    #unit01.displayUnit()
+    #for value in unitName:
+     #   print value
+    #for value in unitxMax:
+        #print value
+    unit01.extentVals()
 if __name__ == '__main__':
     main()
