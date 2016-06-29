@@ -19,8 +19,53 @@ class Unit:
         self.unittype = unittype
     def displayUnit(self):
         print "fmcd: ", self.fmcd, ", Name: ", self.name, ", Unit Code: ", self.code
-    def passUnit(x):
-        x = self.fmcd
+
+
+#building a dict
+unitDict = {'01':{'fmcd':'01280','name':'Allegan Twp'},
+            '02':{'fmcd':'13770','name':'Casco Twp'},
+            '04':{'fmcd':'15200','name':'Cheshire Twp'},
+            '05':{'fmcd':'16720','name':'Clyde Twp'}
+            }
+
+"""
+unit01 = ("01","01280","Allegan Twp","AlleganTwp","T2NR13W","Allegan Township","Allegan","Township")
+unit02 = ("02","13700","Casco Twp","CascoTwp","T1NR16W","Casco Township","Casco","Township")
+unit03 = ("03","15200","Cheshire Twp","CheshireTwp","T1NR14W","Cheshire Township","Cheshire","Township")
+unit04 = ("04","16720","Clyde Twp","ClydeTwp","T2NR15W","Clyde Township","Clyde","Township")
+unit05 = ("05","22680","Dorr Twp","DorrTwp","T4NR12W","Dorr Township","Dorr","Township")
+unit06 = ("06","28120","Fillmore Twp","FillmoreTwp","T4NR15W","Fillmore Township","Fillmore","Township")
+unit07 = ("07","31360","Ganges Twp","GangesTwp","T2NR16W","Ganges Township","Ganges","Township")
+unit08 = ("08","35720","Gun Plain Twp","GunPlainTwp","T1NR11W","Gun Plain Township","Gun Plain","Township")
+unit09 = ("09","37460","Heath Twp","HeathTwp","T3NR14W","Heath Township","Heath","Township")
+unit10 = ("10","39200","Hopkins Twp","HopkinsTwp","T3NR12W","Hopkins Township","Hopkins","Township")
+unit11 = ("11","45180","Laketown Twp","LaketownTwp","T4NR16W","Laketown Township","Laketown","Township")
+unit12 = ("12","46600","Lee Twp","LeeTwp","T1NR15W","Lee Township","Lee","Township")
+unit13 = ("13","46760","Leighton Twp","LeightonTwp","T4NR11W","Leighton Township","Leighton","Township")
+unit14 = ("14","50840","Manlius Twp","ManliusTwp","T3NR15W","Manlius Township","Manlius","Township")
+unit15 = ("15","52000","Martin Twp","MartinTwp","T2NR11W","Martin Township","Martin","Township")
+unit16 = ("16","55200","Monterey Twp","MontereyTwp","T3NR13W","Monterey Township","Monterey","Township")
+unit17 = ("17","61640","Otsego Twp","OtsegoTwp","T1NR12W","Otsego Township","Otsego","Township")
+unit18 = ("18","61820","Overisel Twp","OveriselTwp","T4NR14W","Overisel Township","Overisel","Township")
+unit19 = ("19","71100","Salem Twp","SalemTwp","T4NR13W","Salem Township","Salem","Township")
+unit20 = ("20","71720","Saugatuck Twp","SaugatuckTwp","T3NR16W","Saugatuck Township","Saugatucl","Township")
+unit21 = ("21","80620","Trowbridge Twp","TrowbridgeTwp","T1NR13W","Trowbridge Township","Trowbridge","Township")
+unit22 = ("22","81580","Valley Twp","ValleyTwp","T2NR14W","Valley Township","Valley","Township")
+unit23 = ("23","84580","Watson Twp","WatsonTwp","T2NR12W","Watson Township","Watson","Township")
+unit24 = ("24","84900","Wayland Twp","WaylandTwp","T3NR11W","Wayland Township","Wayland","Township")
+unit42 = ("42","39200","Hopkins Village","Hopkins Village","","Hopkins Village","Hopkins","Village")
+unit44 = ("44","52000","Martin Village","Martin Village","","Martin Village","Martin","Village")
+unit51 = ("51","01260","Allegan City","AlleganCity","","Allegan City","Allegan","City")
+unit52 = ("52","27740","Fennville City","FennvilleCity","","Fennville City","Fennville","City")
+unit53 = ("53","38640","Holland City","HollandCity","","Holland City","Holland","City")
+unit54 = ("54","61620","Otsego City","OtsegoCity","","Otsego City","Otsego","City")
+unit55 = ("55","64740","Plainwell City","PlainwellCity","","Plainwell City","Plainwell","City")
+unit56 = ("56","71700","Saugatuck City","SaugatuckCity","","Saugatuck City","Saugatuck","City")
+unit57 = ("57","74980","South Haven City","South HavenCity","","South Haven City","South Haven","City")
+unit58 = ("58","84880","Wayland City","WaylandCity","","Wayland City","Wayland","City")
+unit59 = ("59","22740","Douglas City","DouglasCity","","Douglas City","Douglas","City")
+"""
+
 
 unit01 = Unit("01","01280","Allegan Twp","AlleganTwp","T2NR13W","Allegan Township","Allegan","Township")
 unit02 = Unit("02","13700","Casco Twp","CascoTwp","T1NR16W","Casco Township","Casco","Township")
@@ -57,6 +102,11 @@ unit56 = Unit("56","71700","Saugatuck City","SaugatuckCity","","Saugatuck City",
 unit57 = Unit("57","74980","South Haven City","South HavenCity","","South Haven City","South Haven","City")
 unit58 = Unit("58","84880","Wayland City","WaylandCity","","Wayland City","Wayland","City")
 unit59 = Unit("59","22740","Douglas City","DouglasCity","","Douglas City","Douglas","City")
+
+
+#tuple test
+#unit01t = ("01","01280","Allegan Twp","AlleganTwp","T2NR13W","Allegan Township","Allegan","Township")
+#unit02t = ("02","13700","Casco Twp","CascoTwp","T1NR16W","Casco Township","Casco","Township")
 
 unitCode = [unit01.code,
             unit02.code,
@@ -346,11 +396,13 @@ unitType = [unit01.unittype,
             unit58.unittype,
             unit59.unittype]
 
-def main():
-    pass
-    unit01.displayUnit()
-    for value in unitName:
-        print value
+unitFile = [unit01.code+unit01.nospacename,
+            unit02.code+unit02.nospacename]
 
+def main():
+    #unit01.displayUnit()
+    for key, value in unitDict():
+        print value.keys()[0]
+   # number_map[int(x)]
 if __name__ == '__main__':
     main()
