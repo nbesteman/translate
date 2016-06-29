@@ -13,10 +13,16 @@ import classUnit
 
 #classUnit.unit01.displayUnit()
 #classUnit.unit59.displayUnit()
-classUnit.unit01.displayUnit()
-for value in classUnit.unitName:
-        print value
+#classUnit.unit01.displayUnit()
+#for value in classUnit.unitName:
+  #      print value
 
+u = classUnit.unit01.passUnit()
+
+print u
+
+eList = classUnit.unit01.passExtentVals()
+print eList
 def main():
     pass
 
