@@ -6,9 +6,35 @@
 # Created:     20160613
 # Modified     20160616
 #-------------------------------------------------------------------------------
+
+class UnitTable:
+    unittablecount = 0
+    def __init__(unit01,unit02,unit03,unit04,unit05,unit06,unit07,unit08,unit09,unit10,unit11,unit12,unit13,unit14,unit15,unit16,unit17,unit18,unit19,unit20,unit21,unit22,unit23,unit24,unit42,unit44,unit51,unit52,unit53,unit54,unit55,unit56,unit57,unit58,unit59):
+        self.code = code
+        self.fmcd = fmcd
+        self.name = name
+        self.nospacename = nospacename
+        self.propername = propername
+        self.shortname = shortname
+        self.xMin = xMin
+        self.yMin = yMin
+        self.xMax = xMax
+        self.yMax = yMax
+        self.unittype = unittype
+        self.codenospacename = codenospacename
+
+code = UnitTable("01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","42","44","51","52","53","54","55","56","57","58","59")
+fmcd = UnitTable("01280","13700","15200","16720","22680","28120","31360","35720","37460","39200","45180","46600","46760","50840","52000","55200","61640","61820","71100","71720","80620","81580","84580","84900","52000","39200","01260","27740","38640","61620","64740","84880","71700","74980","22740")
+name = UnitTable("Allegan Twp","Casco Twp","Cheshire Twp","Clyde Twp","Dorr Twp","Fillmore Twp","Ganges Twp","Gun Plain Twp","Heath Twp","Hopkins Twp","Laketown Twp","Lee Twp","Leighton Twp","Manlius Twp","Martin Twp","Monterey Twp","Otsego Twp","Overisel Twp","Salem Twp","Saugatuck Twp","Trowbridge Twp","Valley Twp","Watson Twp","Wayland Twp","Martin Village","Hopkins Village","Allegan City","Fennville City","Holland City","Otsego City","Plainwell City","Wayland City","Saugatuck City","South Haven City","Douglas City")
+nospacename = UnitTable("AlleganTwp","CascoTwp","CheshireTwp","ClydeTwp","DorrTwp","FillmoreTwp","GangesTwp","GunPlainTwp","HeathTwp","HopkinsTwp","LaketownTwp","LeeTwp","LeightonTwp","ManliusTwp","MartinTwp","MontereyTwp","OtsegoTwp","OveriselTwp","SalemTwp","SaugatuckTwp","TrowbridgeTwp","ValleyTwp","WatsonTwp","WaylandTwp","Martin Village","Hopkins Village","AlleganCity","FennvilleCity","HollandCity","OtsegoCity","PlainwellCity","WaylandCity","SaugatuckCity","South HavenCity","DouglasCity")
+propername = UnitTable("Allegan Township","Casco Township","Cheshire Township","Clyde Township","Dorr Township","Fillmore Township","Ganges Township","Gun Plain Township","Heath Township","Hopkins Township","Laketown Township","Lee Township","Leighton Township","Manlius Township","Martin Township","Monterey Township","Otsego Township","Overisel Township","Salem Township","Saugatuck Township","Trowbridge Township","Valley Township","Watson Township","Wayland Township","Martin Village","Hopkins Village","Allegan City","Fennville City","Holland City","Otsego City","Plainwell City","Wayland City","Saugatuck City","South Haven City","Douglas City")
+shortname = UnitTable("Allegan","Casco","Cheshire","Clyde","Dorr","Fillmore","Ganges","Gun Plain","Heath","Hopkins","Laketown","Lee","Leighton","Manlius","Martin","Monterey","Otsego","Overisel","Salem","Saugatucl","Trowbridge","Valley","Watson","Wayland","Martin","Hopkins","Allegan","Fennville","Holland","Otsego","Plainwell","Wayland","Saugatuck","South Haven","Douglas")
+unittype = UnitTable("Township","Township","Township","Township","Township","Township","Township","Township","Township","Township","Township","Township","Township","Township","Township","Township","Township","Township","Township","Township","Township","Township","Township","Township","Village","Village","City","City","City","City","City","City","City","City","City")
+codenospacename = UnitTable("01AlleganTwp","02CascoTwp","03CheshireTwp","04ClydeTwp","05DorrTwp","06FillmoreTwp","07GangesTwp","08GunPlainTwp","09HeathTwp","10HopkinsTwp","11LaketownTwp","12LeeTwp","13LeightonTwp","14ManliusTwp","15MartinTwp","16MontereyTwp","17OtsegoTwp","18OveriselTwp","19SalemTwp","20SaugatuckTwp","21TrowbridgeTwp","22ValleyTwp","23WatsonTwp","24WaylandTwp","42MartinVillage","44HopkinsVillage","51AlleganCity","52FennvilleCity","53HollandCity","54OtsegoCity","55PlainwellCity","56WaylandCity","57SaugatuckCity","SouthHavenCity","59DouglasCity")
+
 class Unit:
     unitcount = 0
-    def __init__(self, code, fmcd, name, nospacename, twprng,propername,shortname,xMin,yMin,xMax,yMax,unittype):
+    def __init__(code, fmcd, name, nospacename, twprng,propername,shortname,xMin,yMin,xMax,yMax,unittype):
         self.code = code
         self.fmcd = fmcd
         self.name = name
@@ -37,7 +63,10 @@ class Unit:
         x2 = self.xMax
         y2 = self.yMax
         return [x1,y1,x2,y2]
-unit01 = Unit("01","1280","Allegan Twp","AlleganTwp","T2NR13W","Allegan Township","Allegan","12710706.2154994","370432.64368309","12742488.4701762","402418.622361924","Township")
+    def passName(self):
+        return unitName
+
+unit01 = Unit("01","01280","Allegan Twp","AlleganTwp","T2NR13W","Allegan Township","Allegan","12710706.2154994","370432.64368309","12742488.4701762","402418.622361924","Township")
 unit02 = Unit("02","13700","Casco Twp","CascoTwp","T1NR16W","Casco Township","Casco","12605000.8997312","339936.769635595","12648052.823418","372250.564259845","Township")
 unit03 = Unit("03","15200","Cheshire Twp","CheshireTwp","T1NR14W","Cheshire Township","Cheshire","12679125.363963","338939.464215509","12710923.5431487","371192.461061092","Township")
 unit04 = Unit("04","16720","Clyde Twp","ClydeTwp","T2NR15W","Clyde Township","Clyde","12647831.5148055","371192.46106109","12679514.8933677","403709.315974756","Township")
@@ -61,16 +90,16 @@ unit21 = Unit("21","80620","Trowbridge Twp","TrowbridgeTwp","T1NR13W","Trowbridg
 unit22 = Unit("22","81580","Valley Twp","ValleyTwp","T2NR14W","Valley Township","Valley","12679199.6853367","370462.173807762","12710923.5434768","403118.052065429","Township")
 unit23 = Unit("23","84580","Watson Twp","WatsonTwp","T2NR12W","Watson Township","Watson","12742420.4516115","370023.868910096","12774260.4381282","402244.760176846","Township")
 unit24 = Unit("24","84900","Wayland Twp","WaylandTwp","T3NR11W","Wayland Township","Wayland","12774287.6464071","401173.053002677","12806532.4270618","433126.847034594","Township")
-unit42 = Unit("42","39200","Hopkins Village","Hopkins Village","","Hopkins Village","Hopkins","12777105.273974","378627.387792259","12783742.2265793","382604.648538509","Village")
-unit44 = Unit("44","52000","Martin Village","Martin Village","","Martin Village","Martin","12745300.4445391","411382.80554901","12749483.553955","414784.241987594","Village")
-unit51 = Unit("51","1260","Allegan City","AlleganCity","","Allegan City","Allegan","12718715.0692323","372686.991208508","12733456.9974255","386329.184068425","City")
+unit42 = Unit("42","52000","Martin Village","Martin Village","","Martin Village","Martin","12745300.4445391","411382.80554901","12749483.553955","414784.241987594","Village")
+unit44 = Unit("44","39200","Hopkins Village","Hopkins Village","","Hopkins Village","Hopkins","12777105.273974","378627.387792259","12783742.2265793","382604.648538509","Village")
+unit51 = Unit("51","01260","Allegan City","AlleganCity","","Allegan City","Allegan","12718715.0692323","372686.991208508","12733456.9974255","386329.184068425","City")
 unit52 = Unit("52","27740","Fennville City","FennvilleCity","","Fennville City","Fennville","12651313.250296","400578.803206928","12658419.7183665","406563.971682761","City")
 unit53 = Unit("53","38640","Holland City","HollandCity","","Holland City","Holland","12646622.7747689","452625.625294178","12669452.7323897","467218.295911928","City")
 unit54 = Unit("54","61620","Otsego City","OtsegoCity","","Otsego City","Otsego","12758085.6246774","346355.399514846","12768662.3453218","357359.475931846","City")
 unit55 = Unit("55","64740","Plainwell City","PlainwellCity","","Plainwell City","Plainwell","12773943.5722921","343530.804114177","12784537.5461829","351881.493121427","City")
-unit56 = Unit("56","71700","Saugatuck City","SaugatuckCity","","Saugatuck City","Saugatuck","12775008.7597943","425130.850231342","12786675.983507","435652.824594175","City")
-unit57 = Unit("57","74980","South Haven City","South HavenCity","","South Haven City","South Haven","12623891.7834855","422882.674609594","12632744.0102036","434161.478167427","City")
-unit58 = Unit("58","84880","Wayland City","WaylandCity","","Wayland City","Wayland","12611712.329498","340775.554375343","12612722.3222287","342094.782708009","City")
+unit56 = Unit("56","84880","Wayland City","WaylandCity","","Wayland City","Wayland","12611712.329498","340775.554375343","12612722.3222287","342094.782708009","City")
+unit57 = Unit("57","71700","Saugatuck City","SaugatuckCity","","Saugatuck City","Saugatuck","12775008.7597943","425130.850231342","12786675.983507","435652.824594175","City")
+unit58 = Unit("58","74980","South Haven City","South HavenCity","","South Haven City","South Haven","12623891.7834855","422882.674609594","12632744.0102036","434161.478167427","City")
 unit59 = Unit("59","22740","Douglas City","DouglasCity","","Douglas City","Douglas","12622459.7797879","416608.619572423","12633100.2850816","424778.653429173","City")
 
 #tuple test
@@ -523,7 +552,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-#Test 230pm
-#Test 238pm
-#Test 242pm
