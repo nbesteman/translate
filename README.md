@@ -1,10 +1,3 @@
----
-layout:  post
-title: Testing the title in Jekyll
----
-
-
-
 # translate
 These files are used to:
 Translate layers from a geodatabase into shapefiles.
